@@ -8,11 +8,13 @@ import Experience from "./sections/Experience.jsx";
 import Testimonials from "./sections/Testimonials.jsx";
 import Footer from "./sections/Footer.jsx";
 import ParticlesBackground from "./components/ParticleBackground.jsx";
+import CustomCursor from "./components/CustomCurser.jsx";
 
 export default function App() {
 
   return (
     <div className="relative gradient text-white">
+      <CustomCursor />
       <ParticlesBackground />
       <Navbar />
       <Home />
