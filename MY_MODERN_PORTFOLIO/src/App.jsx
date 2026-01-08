@@ -7,11 +7,13 @@ import Contact from "./sections/Contact.jsx";
 import Experience from "./sections/Experience.jsx";
 import Testimonials from "./sections/Testimonials.jsx";
 import Footer from "./sections/Footer.jsx";
+import ParticlesBackground from "./components/ParticleBackground.jsx";
 
 export default function App() {
 
   return (
     <div className="relative gradient text-white">
+      <ParticlesBackground />
       <Navbar />
       <Home />
       <About />
