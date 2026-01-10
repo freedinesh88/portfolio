@@ -9,10 +9,15 @@ import Testimonials from "./sections/Testimonials.jsx";
 import Footer from "./sections/Footer.jsx";
 import ParticlesBackground from "./components/ParticleBackground.jsx";
 import CustomCursor from "./components/CustomCurser.jsx";
+import { useState } from "react";
+import IntroAnimation from "./components/IntroAnimation.jsx";
 
 export default function App() {
-
+  const [introDone, setIntroDone] = useState(false);
   return (
+    <>
+    {!introDone && <IntroAnimation onFinish={() => setIntroDone(true)} />}
+      {introDone && (
     <div className="relative gradient text-white">
       <CustomCursor />
       {/* <ParticlesBackground /> */}
@@ -26,5 +31,7 @@ export default function App() {
       <Contact />
       <Footer />
     </div>
+    )}
+    </>
   )
 }
